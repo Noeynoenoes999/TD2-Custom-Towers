@@ -8,7 +8,7 @@ setInterval(function () {
   let birdNest = document.querySelectorAll('[innerHTML="Bird Nest"]');
   for (i = 0; i < birdNest.length; i++) {
     let text = birdNest[i];
-    text.innerHTML = "AC-130 Gunship Base";
+    text.textContent = "AC-130 Gunship Base";
   }
 
   let birdNestDesc = document.querySelectorAll(
@@ -16,7 +16,7 @@ setInterval(function () {
   );
   for (i = 0; i < birdNestDesc.length; i++) {
     let text = birdNestDesc[i];
-    text.innerHTML =
+    text.textContent =
       "Allows close air support by getting AC-130's in the air, firing 120mm Howitzer shells.  The night vision capabilities allow ghost detection.";
   }
   // Basic image/text replacement
@@ -30,6 +30,8 @@ setInterval(function () {
   )[1].children[0]._owner.stateNode.state.towers.forEach((tower) => {
     if (tower.type == "bird") {
       tower.birds.forEach((bird) => {
+
+        //bird.projectileType = "pig"
 
         const b64toBlob = (b64Data, contentType='', sliceSize=512) => {
           const byteCharacters = atob(b64Data);
@@ -74,6 +76,14 @@ setInterval(function () {
       tower.stats.maxTargets = 1;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 3;
+    } else if (tower.type == "dragon") {
+      //Dragon turns into flamethrower
+      tower.stats.dmg = 0.1;
+      tower.stats.fireRate = 1;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 1000;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 2
     }
   });
 
