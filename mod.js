@@ -60,7 +60,7 @@ setInterval(function () {
   let railgunDesc = getElementsByText('Shoots enemies from far away.', 'div');
   for (i = 0; i < railgunDesc.length; i++) {
     let text = railgunDesc[i];
-    text.textContent = "A sniper operator given a truly heavy weapon.  Strongest targeting recommended.";
+    text.textContent = "A sniper given a truly heavy weapon.";
   }
   // Basic image/text replacement
 
