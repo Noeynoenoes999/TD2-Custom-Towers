@@ -2,23 +2,38 @@ document.head.insertAdjacentHTML(
   "afterbegin",
   "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;\">"
 );
+
+function getElementsByText(str, tag = 'div') {
+  return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
+}
+
 setInterval(function () {
   // Basic text replacement
 
-  let birdNest = document.querySelectorAll('[innerHTML="Bird Nest"]');
-  for (i = 0; i < birdNest.length; i++) {
-    let text = birdNest[i];
-    text.textContent = "AC-130 Gunship Base";
-  }
+  let unicorns = getElementsByText('Unicorn', 'div');
+  for (i = 0; i < unicorns.length; i++) {
+    let text = unicorns[i];
+    text.textContent = "TOW Missile Base";
+  } 
 
-  let birdNestDesc = document.querySelectorAll(
-    '[innerHTML="Creates birds that fly around and throw feathers."]'
-  );
-  for (i = 0; i < birdNestDesc.length; i++) {
-    let text = birdNestDesc[i];
-    text.textContent =
-      "Allows close air support by getting AC-130's in the air, firing 120mm Howitzer shells.  The night vision capabilities allow ghost detection.";
-  }
+  let unicornsDesc = getElementsByText('Launch long-range auto-targeting missiles.', 'div');
+  for (i = 0; i < unicornsDesc.length; i++) {
+    let text = unicornsDesc[i];
+    text.textContent = "The TOW missile system destroys target with a HEAT warhead.";
+  } 
+
+
+  let nests = getElementsByText('Bird Nest', 'div');
+  for (i = 0; i < nests.length; i++) {
+    let text = nests[i];
+    text.textContent = "AC-130 Gunship Base";
+  } 
+
+  let nestsDesc = getElementsByText('Creates birds that fly around and throw feathers.', 'div');
+  for (i = 0; i < nestsDesc.length; i++) {
+    let text = nestsDesc[i];
+    text.textContent = "Allows CAS with AC-130s, firing 120mm Howitzer shells.";
+  } 
   // Basic image/text replacement
 
   ///////////////////////////////////
@@ -70,7 +85,7 @@ setInterval(function () {
         //   });
       });
 
-      tower.stats.dmg = 150;
+      tower.stats.dmg = 160;
       tower.stats.fireRate = 5000;
       tower.stats.ghostDetect = true;
       tower.stats.maxTargets = 1;
@@ -84,6 +99,14 @@ setInterval(function () {
       tower.stats.maxTargets = 1000;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 2
+    } else if (tower.type == "unicorn") {
+      //Dragon turns into TOW missile launcher
+      tower.stats.dmg = 140;
+      tower.stats.fireRate = 4500;
+      tower.stats.ghostDetect = true;
+      tower.stats.maxTargets = 1;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 7.5;
     }
   });
 
