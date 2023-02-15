@@ -78,7 +78,7 @@ setInterval(function () {
       tower.stats.range = 3;
     } else if (tower.type == "dragon") {
       //Dragon turns into flamethrower
-      tower.stats.dmg = 0.1;
+      tower.stats.dmg = 0.5;
       tower.stats.fireRate = 1;
       tower.stats.ghostDetect = false;
       tower.stats.maxTargets = 1000;
