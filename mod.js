@@ -75,14 +75,14 @@ setInterval(function () {
       tower.stats.dmg = 160;
       tower.stats.fireRate = 4500;
       tower.stats.ghostDetect = true;
-      tower.stats.maxTargets = 1;
+      tower.stats.maxTargets = 10;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 3;
     } else if (tower.type == "bird" && tower.level == 3) {
       tower.stats.dmg = 80;
       tower.stats.fireRate = 1000;
       tower.stats.ghostDetect = true;
-      tower.stats.maxTargets = 1;
+      tower.stats.maxTargets = 6;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 3;
     } else if (tower.type == "bird") {
@@ -126,9 +126,9 @@ setInterval(function () {
       // });
 
       tower.stats.dmg = 40;
-      tower.stats.fireRate = 250;
+      tower.stats.fireRate = 125;
       tower.stats.ghostDetect = true;
-      tower.stats.maxTargets = 1;
+      tower.stats.maxTargets = 3;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 3;
     } else if (tower.type == "dragon") {
