@@ -138,7 +138,7 @@ setInterval(function () {
       tower.stats.fireRate = 5000;
       tower.stats.ghostDetect = true;
       tower.stats.maxTargets = 1000000;
-      tower.stats.numProjectiles = 2;
+      tower.stats.numProjectiles = 1;
       tower.stats.range = 20;
     } else if (tower.type == "owl" && tower.level == 3) {
       tower.stats.dmg = 100000;
