@@ -36,7 +36,7 @@ setInterval(function () {
   let nestsDesc = getElementsByText('Creates birds that fly around and throw feathers.', 'div');
   for (i = 0; i < nestsDesc.length; i++) {
     let text = nestsDesc[i];
-    text.textContent = "Allows CAS with AC-130s, firing 120mm Howitzer shells.";
+    text.textContent = "Allows CAS with hard-hitting weapons.";
   }
 
   let dragon = getElementsByText('Dragon', 'div');
