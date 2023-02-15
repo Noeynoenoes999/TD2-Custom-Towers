@@ -62,6 +62,18 @@ setInterval(function () {
     let text = railgunDesc[i];
     text.textContent = "A sniper given a truly heavy weapon.";
   }
+
+  let mortar = getElementsByText('Moose', 'div');
+  for (i = 0; i < mortar.length; i++) {
+    let text = mortar[i];
+    text.textContent = "Mortar";
+  }
+
+  let mortarDesc = getElementsByText('Drops bottles of syrup.', 'div');
+  for (i = 0; i < mortarDesc.length; i++) {
+    let text = mortarDesc[i];
+    text.textContent = "Fires mortar rounds, leaving behind an area with poisonous gas.";
+  }
   // Basic image/text replacement
 
   ///////////////////////////////////
@@ -182,6 +194,13 @@ setInterval(function () {
       tower.stats.maxTargets = 1000000;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 20;
+    } else if (tower.type == "moose") {
+      tower.stats.dmg = 3;
+      tower.stats.fireRate = 3000;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 1000000;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 3;
     }
   });
 
