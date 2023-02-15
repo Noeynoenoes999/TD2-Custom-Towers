@@ -74,6 +74,30 @@ setInterval(function () {
     let text = mortarDesc[i];
     text.textContent = "Fires mortar rounds, leaving behind an area with poisonous gas.";
   }
+
+  let machinegunner = getElementsByText('Chick', 'div');
+  for (i = 0; i < machinegunner.length; i++) {
+    let text = machinegunner[i];
+    text.textContent = "Machine Gunner";
+  }
+
+  let machinegunnerDesc = getElementsByText('Throws eggs. That\'s all.', 'div');
+  for (i = 0; i < machinegunnerDesc.length; i++) {
+    let text = machinegunnerDesc[i];
+    text.textContent = "A machine gunner.  A specialty infantry unit.";
+  }
+
+  let rifleman = getElementsByText('Squirrel', 'div');
+  for (i = 0; i < rifleman.length; i++) {
+    let text = rifleman[i];
+    text.textContent = "Rifleman";
+  }
+
+  let riflemanDesc = getElementsByText('Fires rounds of acorns at enemies.', 'div');
+  for (i = 0; i < riflemanDesc.length; i++) {
+    let text = riflemanDesc[i];
+    text.textContent = "Your standard infantry unit.  Armed with a rifle using burst fire.";
+  }
   // Basic image/text replacement
 
   ///////////////////////////////////
@@ -201,6 +225,16 @@ setInterval(function () {
       tower.stats.maxTargets = 1000000;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 3;
+    } else if (tower.type == "chick") {
+        tower.stats.dmg = 2;
+        tower.stats.ghostDetect = false;
+        tower.stats.maxTargets = 2;
+    }  else if (tower.type == "squirrel") {
+      tower.stats.dmg = 2;
+      tower.stats.fireRate = 250;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 4;
+      tower.stats.numProjectiles = 1;
     }
   });
 
