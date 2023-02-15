@@ -71,7 +71,21 @@ setInterval(function () {
   Object.values(
     document.querySelector("#app > div > div")
   )[1].children[0]._owner.stateNode.state.towers.forEach((tower) => {
-    if (tower.type == "bird") {
+    if (tower.type == "bird" && tower.level == 4) {
+      tower.stats.dmg = 160;
+      tower.stats.fireRate = 4500;
+      tower.stats.ghostDetect = true;
+      tower.stats.maxTargets = 1;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 3;
+    } else if (tower.type == "bird" && tower.level == 3) {
+      tower.stats.dmg = 80;
+      tower.stats.fireRate = 1000;
+      tower.stats.ghostDetect = true;
+      tower.stats.maxTargets = 1;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 3;
+    } else if (tower.type == "bird") {
       // tower.birds.forEach((bird) => {
 
       //   //bird.projectileType = "pig"
@@ -111,8 +125,8 @@ setInterval(function () {
       //   //   });
       // });
 
-      tower.stats.dmg = 160;
-      tower.stats.fireRate = 4500;
+      tower.stats.dmg = 40;
+      tower.stats.fireRate = 250;
       tower.stats.ghostDetect = true;
       tower.stats.maxTargets = 1;
       tower.stats.numProjectiles = 1;
@@ -126,7 +140,7 @@ setInterval(function () {
       tower.stats.numProjectiles = 1;
       tower.stats.range = 2
     } else if (tower.type == "unicorn") {
-      //Dragon turns into TOW missile launcher
+      //Unicorn turns into TOW missile launcher
       tower.stats.dmg = 140;
       tower.stats.fireRate = 4000;
       tower.stats.ghostDetect = true;
