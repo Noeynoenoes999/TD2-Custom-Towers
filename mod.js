@@ -104,16 +104,28 @@ setInterval(function () {
   }
 
   let tank = getElementsByText('Goldfish', 'div');
-      for (i = 0; i < tank.length; i++) {
-        let text = tank[i];
-        text.textContent = "Humvee Factory";
-      }
+  for (i = 0; i < tank.length; i++) {
+    let text = tank[i];
+    text.textContent = "Humvee Factory";
+  }
 
   let tankDesc = getElementsByText('Spawns fish that travel the course backwards.', 'div');
-      for (i = 0; i < tankDesc.length; i++) {
-        let text = tankDesc[i];
-        text.textContent = "A humvee factory which can make tanks.";
-      }
+  for (i = 0; i < tankDesc.length; i++) {
+    let text = tankDesc[i];
+    text.textContent = "A humvee factory which can make tanks.";
+  }
+
+  let gas = getElementsByText('Wizard', 'div');
+  for (i = 0; i < gas.length; i++) {
+    let text = gas[i];
+    text.textContent = "Gas Officer";
+  }
+
+  let gasDesc = getElementsByText('Casts a tornado that pushes back enemies.', 'div');
+  for (i = 0; i < gasDesc.length; i++) {
+    let text = gasDesc[i];
+    text.textContent = "Fires tear gas that hurts enemies and pushes them back.  At max, can fire two at once.";
+  }
   // Basic image/text replacement
 
   ///////////////////////////////////
@@ -309,6 +321,24 @@ setInterval(function () {
       for (i = 0; i < tank.length; i++) {
         let text = tank[i];
         text.textContent = "Humvee Factory";
+      }
+    } else if (tower.type == "wizard" && tower.level == 4) {
+      tower.stats.dmg = 6;
+      tower.stats.fireRate = 3000;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 1000;
+      tower.stats.numProjectiles = 2;
+    } else if (tower.type == "wizard") {
+      tower.stats.dmg = 6;
+      tower.stats.fireRate = 3000;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 1000;
+      tower.stats.numProjectiles = 1;
+
+      let tank = getElementsByText('Wizard', 'div');
+      for (i = 0; i < tank.length; i++) {
+        let text = tank[i];
+        text.textContent = "Gas Officer";
       }
     }
   });
