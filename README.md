@@ -7,9 +7,9 @@ Tower Modifications:
  - Chick = Machine Gunner - A specialty infantry unit that fires quickly.
  - Squirrel = Rifleman - Your simple infantryman.
  - Bird Nest = AC-130 Airbase - Allows CAS with hard-hitting weapons.
-  - Tier 1-3 = 25mm Gatling Gun
-  - Tier 4 = 40mm
-  - Tier 5 = 120mm
+  * Tier 1-3 = 25mm Gatling Gun
+  * Tier 4 = 40mm
+  * Tier 5 = 120mm
  - Unicorn = TOW Missile Base - The TOW missile system destroys target with a HEAT warhead.
  - Wizard = Gas Officer - Fires tear gas that hurts enemies and pushes them back.  At advanced status(Tier 5), it can fire two at once.
  - Goldfish = Humvee Factory - A humvee factory which can make tanks.
