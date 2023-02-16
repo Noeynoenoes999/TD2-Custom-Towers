@@ -222,6 +222,20 @@ setInterval(function () {
       tower.stats.maxTargets = 1000000;
       tower.stats.numProjectiles = 1;
       tower.stats.range = 20;
+    } else if (tower.type == "moose" && tower.level == 4) {
+      tower.stats.dmg = 3;
+      tower.stats.fireRate = 3000;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 1000000;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 10;
+    } else if (tower.type == "moose" && tower.level == 3) {
+      tower.stats.dmg = 3;
+      tower.stats.fireRate = 3000;
+      tower.stats.ghostDetect = false;
+      tower.stats.maxTargets = 1000000;
+      tower.stats.numProjectiles = 1;
+      tower.stats.range = 6;
     } else if (tower.type == "moose") {
       tower.stats.dmg = 3;
       tower.stats.fireRate = 3000;
