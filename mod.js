@@ -112,7 +112,7 @@ setInterval(function () {
   let tankDesc = getElementsByText('Spawns fish that travel the course backwards.', 'div');
       for (i = 0; i < tankDesc.length; i++) {
         let text = tankDesc[i];
-        text.textContent = "A humvee factory which can be produced to make tanks.";
+        text.textContent = "A humvee factory which can make tanks.";
       }
   // Basic image/text replacement
 
