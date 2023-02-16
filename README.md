@@ -1,7 +1,3 @@
 # TD2 Custom Towers
 
-Use 
-git branch -m main release
-git fetch origin
-git branch -u origin/release release
-git remote set-head origin -a
+A simple modification to improve content in Blooket Tower Defense 2.
